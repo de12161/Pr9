@@ -5,11 +5,11 @@ internal class TimedDecorator(private val wrappee: ISolution) : ISolution {
     override fun solve(): String {
         println(wrappee.name)
 
-        val start = System.currentTimeMillis()
+        val start = System.nanoTime()
         val result = wrappee.solve()
-        val end = System.currentTimeMillis()
+        val end = System.nanoTime()
 
-        println("Время выполнения: ${end - start} мс")
+        println("Время выполнения: ${end - start} нс")
 
         return result
     }
