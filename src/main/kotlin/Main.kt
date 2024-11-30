@@ -4,7 +4,7 @@ fun main() {
     )
 
     for (i in problems.indices) {
-        print("Вывод: ${problems[i].solve()}")
+        println("Вывод: ${problems[i].solve()}")
         println()
     }
 }
