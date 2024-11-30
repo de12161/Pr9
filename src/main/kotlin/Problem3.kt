@@ -3,7 +3,7 @@ internal object Problem3 : ISolution {
         get() = "Problem 3"
 
     override fun solve(): String {
-        val nums = arrayListOf(2, 7, 11, 15)
+        val nums = intArrayOf(2, 7, 11, 15)
         val target = 9
 
         val ans = nums.associateWith { target - it } .filterValues { nums.contains(it) }
