@@ -5,6 +5,8 @@ internal class TimedDecorator(private val wrappee: ISolution) : ISolution {
     override fun solve(): String {
         println(wrappee.name)
 
+        wrappee.solve()
+
         val start = System.nanoTime()
         val result = wrappee.solve()
         val end = System.nanoTime()
