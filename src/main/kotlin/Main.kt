@@ -5,7 +5,8 @@ fun main() {
         Problem3,
         Problem4,
         Problem5,
-        Problem6
+        Problem6,
+        Problem7
     )
 
     problems.printResults()
