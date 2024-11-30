@@ -1,5 +1,5 @@
 fun main() {
-    ProblemList.addProblems(
+    val problems = ProblemList(
         Problem1,
         Problem2,
         Problem3,
@@ -8,5 +8,5 @@ fun main() {
         Problem6
     )
 
-    ProblemList.printResults()
+    problems.printResults()
 }

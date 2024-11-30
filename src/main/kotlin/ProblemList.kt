@@ -1,13 +1,19 @@
-internal object ProblemList {
-    private val _problems = mutableListOf<TimedDecorator>()
+internal class ProblemList(vararg problems: ISolution) {
+    private val _problems: Set<TimedDecorator>
 
-    fun addProblems(vararg problems: ISolution) {
-        problems.forEach { _problems.add(TimedDecorator(it)) }
+    init {
+        val p = mutableSetOf<TimedDecorator>()
+
+        problems.forEach {
+            p.add(TimedDecorator(it))
+        }
+
+        _problems = p
     }
 
     fun printResults() {
-        for (i in _problems.indices) {
-            println("Вывод: ${_problems[i].solve()}")
+        _problems.forEach {
+            println("Вывод: ${it.solve()}")
             println()
         }
     }
