@@ -1,13 +1,9 @@
-internal object Problem3 : ISolution {
+internal class Problem3(private val _nums: IntArray, private val _target: Int) : IProblem {
     override val name: String
-        get() = "Problem 3"
+        get() = "Задача 3"
 
     override fun solve(): String {
-        val nums = intArrayOf(2, 7, 11, 15)
-        val target = 9
-
-        val ans = nums.associateWith { target - it } .filterValues { nums.contains(it) }
-
-        return "[${nums.indexOf(ans.keys.first())}, ${nums.indexOf(ans.values.first())}]"
+        val ans = _nums.associateWith { _target - it } .filterValues { _nums.contains(it) }
+        return "[${_nums.indexOf(ans.keys.first())}, ${_nums.indexOf(ans.values.first())}]"
     }
 }

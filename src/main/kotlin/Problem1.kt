@@ -1,11 +1,8 @@
-internal object Problem1 : ISolution {
+internal class Problem1(private val _nums1: IntArray, private val _nums2: IntArray) : IProblem {
     override val name: String
         get() = "Задача 1"
 
     override fun solve(): String {
-        val nums1 = intArrayOf(1, 2, 2, 1)
-        val nums2 = intArrayOf(2, 2)
-
-        return nums1.intersect(nums2.toSet()).toString()
+        return _nums1.intersect(_nums2.toSet()).toString()
     }
 }

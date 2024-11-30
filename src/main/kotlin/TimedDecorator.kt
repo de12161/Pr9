@@ -1,4 +1,4 @@
-internal class TimedDecorator(private val wrappee: ISolution) : ISolution {
+internal class TimedDecorator(private val wrappee: IProblem) : IProblem {
     override val name: String
         get() = wrappee.name
 

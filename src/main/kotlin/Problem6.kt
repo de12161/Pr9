@@ -1,10 +1,8 @@
-internal object Problem6 : ISolution {
+internal class Problem6(private val _nums: IntArray) : IProblem {
     override val name: String
         get() = "Задача 6"
 
     override fun solve(): String {
-        val nums = intArrayOf(3, 2, 3)
-
-        return nums.filter { num -> nums.count { it == num } > nums.size / 2 } .first().toString()
+        return _nums.first { num -> _nums.count { it == num } > _nums.size / 2 } .toString()
     }
 }
