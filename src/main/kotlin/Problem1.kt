@@ -3,8 +3,8 @@ internal object Problem1 : ISolution {
         get() = "Задача 1"
 
     override fun solve(): String {
-        val nums1: Iterable<Int> = arrayListOf(1, 2, 2, 1)
-        val nums2: Iterable<Int> = arrayListOf(2, 2)
+        val nums1 = arrayListOf(1, 2, 2, 1)
+        val nums2 = arrayListOf(2, 2)
 
         return nums1.intersect(nums2.toSet()).toString()
     }
